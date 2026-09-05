@@ -136,7 +136,7 @@ dotnet user-secrets set "ConnectionStrings:OracleConnection" "User Id=SEU_USUARI
 
 Confirmação de que a API está saudável e a conexão com o Oracle está ativa.
 
-![Health Check](Docs/Evidencias/01-health-check.png)
+![Health Check](cp4-perfumaria-API/Docs/Evidencias/01-health-check.png)
 
 ### 2. Criação de Nota Olfativa
 
@@ -147,7 +147,7 @@ Confirmação de que a API está saudável e a conexão com o Oracle está ativa
 }
 ```
 
-![Post Nota Olfativa](Docs/Evidencias/02-post-nota-olfativa.png)
+![Post Nota Olfativa](cp4-perfumaria-API/Docs/Evidencias/02-post-nota-olfativa.png)
 
 Retorno `201 Created` com o ID gerado da nota.
 
@@ -164,7 +164,7 @@ Retorno `201 Created` com o ID gerado da nota.
 }
 ```
 
-![Post Perfume](Docs/Evidencias/03-post-perfume.png)
+![Post Perfume](cp4-perfumaria-API/Docs/Evidencias/03-post-perfume.png)
 
 Retorno `201 Created` com o ID gerado do perfume.
 
@@ -177,19 +177,19 @@ Retorno `201 Created` com o ID gerado do perfume.
 }
 ```
 
-![Post Associar Nota](Docs/Evidencias/04-post-associar-nota.png)
+![Post Associar Nota](cp4-perfumaria-API/Docs/Evidencias/04-post-associar-nota.png)
 
 Retorno `204 No Content`, confirmando a criação do vínculo `PerfumeNota`.
 
 ### 5. Consulta do Perfume com Nota Populada
 
-![Get Perfume com Notas](Docs/Evidencias/05-get-perfume-com-notas.png)
+![Get Perfume com Notas](cp4-perfumaria-API/Docs/Evidencias/05-get-perfume-com-notas.png)
 
 O array `notas` no corpo da resposta confirma que o relacionamento N:N foi persistido e é recuperado corretamente via `Include`/`ThenInclude`.
 
 ### 6. Atualização de Perfume
 
-![Put Perfume](Docs/Evidencias/06-put-perfume.png)
+![Put Perfume](cp4-perfumaria-API/Docs/Evidencias/06-put-perfume.png)
 
 Retorno `204 No Content`, confirmando a atualização.
 
@@ -206,25 +206,25 @@ Retorno `204 No Content`, confirmando a atualização.
 }
 ```
 
-![Post Perfume Validacao 400](Docs/Evidencias/07-post-perfume-validacao-400.png)
+![Post Perfume Validacao 400](cp4-perfumaria-API/Docs/Evidencias/07-post-perfume-validacao-400.png)
 
 Retorno `400 Bad Request`, evidenciando a validação de domínio (guard clauses no construtor da entidade `Perfume`).
 
 ### 8. Remoção de Perfume
 
-![Delete Perfume](Docs/Evidencias/08-delete-perfume.png)
+![Delete Perfume](cp4-perfumaria-API/Docs/Evidencias/08-delete-perfume.png)
 
 Retorno `204 No Content`.
 
 ### 9. Confirmação de Remoção
 
-![Get Perfume 404](Docs/Evidencias/09-get-perfume-404.png)
+![Get Perfume 404](cp4-perfumaria-API/Docs/Evidencias/09-get-perfume-404.png)
 
 Nova consulta ao mesmo ID retorna `404 Not Found`, confirmando a exclusão efetiva no banco.
 
 ### 10. Testes Unitários Automatizados
 
-![Testes Unitarios](Docs/Evidencias/10-testes-unitarios.png)
+![Testes Unitarios](cp4-perfumaria-API/Docs/Evidencias/10-testes-unitarios.png)
 
 34 testes executados, cobrindo Domínio (validação de entidades), Serviço (regras de aplicação com Mock de Repositório) e Controller (tradução HTTP com Mock de Serviço) — 100% de aprovação.
 
