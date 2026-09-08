@@ -1,9 +1,0 @@
-ANA CAROLINA PEREIRA FONTES – RM562145
-LUÍSA GANASEVICI DE DE ABREU – RM563403
-MATHEUS MOYA DE OLIVEIRA – RM562822
-
-Link:
-https://youtu.be/xf1mWE8eDqM
-
-Github:
-https://github.com/matheusmoyaoliveira/cp4-dotnet-perfumaria-API
